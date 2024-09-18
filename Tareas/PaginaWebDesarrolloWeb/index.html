@@ -3,46 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Web</title>
+    <title>Inicio</title>
+    <!-- Links de CSS que se ocupan en el documento -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
+    <!-- Header de la pagina, es el mismo en todas las paginas -->
     <header>
-        
-            <h1><span style="color: #821131">PIE GRANDE</span> MITO O REALIDAD?</h1>
-        
+        <h1><span style="color: #821131">PIE GRANDE</span> MITO O REALIDAD?</h1>
     </header>
 
+    <!-- Barra de navegacion que contiene las 5 paginas -->
     <nav>
-        <a href="#home">Inicio</a>
-        <a href="#pictures">Fotos</a>
-        <a href="#comments">Testimonios</a>
-        <a href="#contact">Contacto</a>
+        <a class="active" href="#home">Inicio</a>
+        <a href="./testimonios.html">Testimonios</a>
+        <a href="./comunidad.html">Comunidad</a>
+        <a href="./contacto.html">Contacto</a>
+        <a href="./ataques.html">Ataques</a>
     </nav>
 
+    <!-- Seccion aside de la pagina web, se muestran links externos e internos a la pagina con target top y blank -->
     <aside style="background-image: url('./fotos/bosque-nieve.jpg.avif');">
         <h2>Mas informacion sobre Pie Grande</h2>
         <ul>
             <li class="margen-aside"><a href="#fotos">Fotos de Pie Grande</a></li>
             <li class="margen-aside"><a href="#audio">Audio de Pie Grande</a></li>
-            <li class="margen-aside"><a href="https://es.wikipedia.org/wiki/Pie_Grande">Pie Grande (Wikipedia)</a></li>
+            <!-- Target Top -->
+            <li class="margen-aside"><a href="https://es.wikipedia.org/wiki/Pie_Grande" target="_top">Pie Grande (Wikipedia)</a></li>
+            <!-- Target Blank -->
             <li class="margen-aside"><a href="https://www.ngenespanol.com/el-mundo/pie-grande-que-ha-pasado-con-las-pruebas-de-su-supuesta-existencia/" target="_blank">Pie Grande (National Geographic)</a></li>
         </ul>
     </aside>
 
+    <!-- Seccion principal de la pagina web -->
     <section style="background-image: url('/fotos/bosque.jpg')">
+        <!-- Primer articulo de la seccion -->
         <article>
             <h2>Lugares donde se ha visto a <span style="color: red;">PIE GRANDE</span></h2>
-            <div>
-                <video height="450" controls>
-                    <source src="./videos/bosque-nieve.mp4" type="video/mp4">                    
-                </video>            
+            <!-- Contenedor del video -->
+            <div class="video-container">
+                <!-- Video -->
+                <video controls>
+                    <source src="./videos/bosque-nieve.mp4" type="video/mp4">
+                </video>
             </div>
         </article>
+
+        <!-- Segundo articulo de la seccion -->
         <article style="margin-top: 70px;">
+            <!-- Integracion de CSS dentro de html, en la etiqueta h2 -->
             <h2 id="fotos" style="color: red">¡¡¡¡¡<span style="color: yellow">FOTOS INEDITAS</span>!!!!</h2>
+            <!-- div que contiene informacion -->
             <div>
                 <h3>Foto de Pie grande mas reciente</h3>
                 <img src="./fotos/pie-grande-1.jpg" width="500" alt="">
@@ -51,6 +65,7 @@
                 <p>Sin embargo, mientras se preparaban para encender una fogata y preparar su cena, escucharon un sonido extraño que rompió la tranquilidad de la noche. Inicialmente, pensaron que podría ser algún animal salvaje o el viento jugando con las ramas, pero el sonido persistió y se volvió más inquietante.</p>
                 <p>Intrigados y algo preocupados, decidieron sacar su cámara para capturar el momento y descubrir la fuente del ruido. Con el corazón acelerado, enfocaron su cámara hacia la dirección del sonido y capturaron esta impactante imagen. La foto muestra una escena misteriosa y enigmática que dejó a los campistas con más preguntas que respuestas.</p>
             </div>
+            <!-- Mas integracion de CSS dentro del html -->
             <div style="margin-top: 70px;">
                 <h3>Primer foto tomada</h3>
                 <img src="./fotos/pie-grande-2.jpg" width="500" alt="">
@@ -59,6 +74,7 @@
                 <p>Este primer registro fotográfico, realizado con equipos rudimentarios comparados con los estándares actuales, marca un hito importante en la evolución de la fotografía. La técnica utilizada para tomar esta foto era innovadora para su época, demostrando la habilidad y creatividad de los primeros fotógrafos.</p>
                 <p>La foto no solo representa un avance tecnológico, sino también un vistazo al pasado que nos permite entender mejor la historia y el desarrollo de la fotografía. Cada detalle de la imagen cuenta una historia, desde el proceso técnico hasta el contexto histórico en el que se tomó.</p>
             </div>
+            <!-- Integracion de un audio en la pagina web usando la etiqueta audio -->
             <div id="audio" style="margin-top: 70px;">
                 <h2>AUDIO DE PIE GRANDE</h3>
                 <audio controls style="width: 100%; max-width: 600px;">
@@ -68,6 +84,7 @@
         </article>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2024 Ivan Gonzalez. Derechos Reservados</p>
     </footer>

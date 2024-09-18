@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <!-- Links de CSS que se ocupan en el documento -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/comunidad.css">
+</head>
+<body>
+
+    <!-- Header de la pagina, es el mismo en todas las paginas -->
+    <header>
+        <h1><span style="color: #821131">PIE GRANDE</span> MITO O REALIDAD?</h1>
+    </header>
+
+    <!-- Barra de navegacion que contiene las 5 paginas -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./testimonios.html">Testimonios</a>
+        <a class="active" href="#">Comunidad</a>
+        <a href="./contacto.html">Contacto</a>
+        <a href="./ataques.html">Ataques</a>
+    </nav>
+
+    <!-- Seccion donde se integro un pequeño carrusel sacado de bootstrap -->
+    <section style="background-image: url('/fotos/bosque.jpg')">
+        <!-- Carrusel -->
+        <div id="carouselExample" class="carousel slide">
+            <!-- Parte interna del carrusel donde se muestran las imagenes -->
+            <div class="carousel-inner carrusel">
+                <!-- Conenedor donde se ingresa la primer imagen -->
+              <div class="carousel-item active">
+                <img src="./fotos/familias/familia-1.jpg" class="d-block" alt="...">
+              </div>
+              <!-- Conenedor donde se ingresa la segunda imagen -->
+              <div class="carousel-item">
+                <img src="./fotos/familias/familia-2.jpg" class="d-block" alt="...">
+              </div>
+              <!-- Conenedor donde se ingresa la tercer imagen -->
+              <div class="carousel-item">
+                <img src="./fotos/familias/familia-3.jpg" class="d-block" alt="...">
+              </div>
+            </div>
+            <!-- Controladores del carrusel -->
+             <!-- Boton de anterior -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Boton de siguiente -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Articulo de la seccion -->
+          <article>
+            <!-- Contenedor del articulo -->
+            <div class="container mb-3">
+                <h1 class="red-text">Unete a toda nuestra comunidad llena de gente que le facina pie grande</h1>
+                <h2>REDES SOCIALES</h2>
+                <!-- Contenedor que integra a todas las redes sociales, se creo otro para manejarlo 
+                independientemente de su contenedor padre -->
+                <div class="container2">
+                    <!-- instagram -->
+                 <div class="red-social">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./fotos/redes-sociales/instagram.jpg" alt="">
+                    </a>
+                 </div>
+                <!-- facebook -->
+                 <div class="red-social">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./fotos/redes-sociales/facebook.png" alt="">
+                    </a>
+                 </div>
+                <!-- discord -->
+                 <div class="red-social">
+                    <a href="https://discord.com/" target="_blank">
+                        <img src="./fotos/redes-sociales/discord.png" alt="">
+                    </a>
+                 </div>
+                <!-- whatsapp -->
+                 <div class="red-social">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="./fotos/redes-sociales/whatsapp.png" alt="">
+                    </a>
+                 </div>
+                </div>
+            </div>
+          </article>
+    </section>
+
+    <!-- Seccion aside de la pagina donde se muestra un perfil -->
+    <aside style="background-image: url('./fotos/bosque-nieve.jpg.avif');">
+        <!-- Contenedor del perfil -->
+        <div class="creador-perfil">
+            <!-- foto de perfil -->
+            <img src="./fotos/caras/maria-fernanda.jpg" alt="maria-fernanda">
+            <!-- Informacion del perfil -->
+            <div>
+                <h3 class="red-text">María Fernanda López</h3>
+                <p>Nacida en Ciudad de México, María Fernanda López es una destacada antropóloga con estudios en los Estados Unidos.</p>
+                <p>Maria Fernanda es quien tuvo el valor de presentar ante la comunidad cientifica las pruebas sobre Pie Grande</p>
+                <ul>
+                    <li><strong>Grado:</strong> Antropología</li>
+                    <li><strong>Universidad:</strong> Universidad de California, Berkeley</li>
+                    <li><strong>Especialización:</strong> Antropología cultural y estudios de comunidades indígenas</li>
+                    <li><strong>Intereses:</strong> Historia cultural, derechos humanos, y preservación de tradiciones ancestrales</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Ivan Gonzalez. Derechos Reservados</p>
+    </footer>
+    
+</body>
+</html>

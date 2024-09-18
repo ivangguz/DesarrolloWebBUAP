@@ -1,0 +1,22 @@
+/* Se utiliza la misma logica que en index.css */
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+}
+aside {
+    color: black;
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+section{
+    grid-area: section;
+}
+form p{
+    color: red;
+}

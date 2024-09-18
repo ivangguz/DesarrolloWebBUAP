@@ -1,0 +1,98 @@
+/* Se utilizara la familia de arial, y tendra un margen y padding de 0, las letras seran blancas */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+/* El header esta marcado para ser usado en la grid-area, asi mismo tendra un fondo de color 543310 con letra F8F4E1
+y un paggin de 10 pixeles, con el texto alineado al centro */
+header {
+    grid-area: header;
+    background-color: #543310;
+    color: #F8F4E1;
+    padding: 10px;
+    text-align: center;
+}
+/* El nav usara display flex, por defecto esto esta en direccion de row, pero se justificara 
+el contenido y se centrara el texto en medio, asi mismo tendra una 
+division de entre elementos del 10% */
+nav {
+    grid-area: nav;
+    background-color: #EAD8C0;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+/* Los enlaces dentro de nav tendran un color especifico y un padding en el eje X de 14px y en el eje Y de 20px
+asi mismo tendra un display inline-block para que no se baje cuando sea poco espacio */
+nav a {
+    color: #821131;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+/* Paddin de 10px en todos los ejes */
+section {
+    padding: 10px;
+}
+/* Tendran un color #333, asi mismo su color de letra sera blanco y tendra un paddig el contenido de 10px */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* tamaño fuente de 16px */
+p {
+    font-size: 16px;
+}
+/* color amarillo por defecto */
+h2{
+    color: yellow;
+}
+/* color negro por defecto */
+h3{
+    color:black;
+}
+/* Cuanto se pase el cursos sobre el enlace que esta dentro del nav, este cambiara su color a #81DAE3 */
+nav a:hover{
+    color: #81DAE3;
+}
+/* Cuando se de click, este cambiara su color a #4CA9B2 */
+nav a:active {
+    color: #4CA9B2;
+}
+/* El color del texto se cambia a blue */
+.active{
+    color: blue;
+}
+/* La primer letra del texto que se le aplique la clase red-text sera amarilla */
+.red-text::first-letter {
+    color: yellow;
+}
+/* A cualquier texto que se le aplique esta clase su letra sera roja */
+.red-text {
+    color: red;
+}
+/* A cualquier texto que se le aplique esta clase su letra sera azul */
+.blue-text{
+    color: #173B45;
+}
+/* La primer letra del texto que se le aplique la clase blue-text sera #B43F3F */
+.blue-text::first-letter{
+    color: #B43F3F;
+}
+
+
+/* Media queries para manejar responsividad */
+/* Móviles */
+@media (max-width: 767px) {
+    /* Cuando la pantalla sea menor a 767px el nav tendra un espaciamiento del 3% */
+    nav{
+        gap: 3%;
+    }
+}

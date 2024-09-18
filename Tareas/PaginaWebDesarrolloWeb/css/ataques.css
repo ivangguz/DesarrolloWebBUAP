@@ -1,0 +1,100 @@
+/* Se aplica la misma logica que con index */
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+}
+aside {
+    color: black;
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+section{
+    grid-area: section;
+}
+img{
+    margin: 5px;
+}
+
+/* Se crea un contenedor para la grafica */
+.grafica {
+    width: 70%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Se define el ancho y alto que ocupara el canvas */
+.grafica canvas {
+    width: 100%;      
+    height: auto;     
+}
+
+/* Se define un contenedor que tiene como direccion por defail columna */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* La decripcion de la grafica, tendra un margen, fondo y color como se muestra ahi, tambien el borde sera un poco redondo */
+.grafica-desc{
+    margin-top: 13px;
+    font-size: 1.2em;
+    color: white;
+    background: #B99470;
+    padding: 5px;
+    border: 4px solid #185519;
+    border-radius: 20px; 
+}
+
+/* Se crea el fondo y las posiciones que tendra lo que va dentro de los datos interesantes */
+.dato-interesante{
+    margin-top: 10px;
+    background: #37B7C3;
+    text-align: center;
+    border: 4px solid white;
+    border-radius: 20px; 
+}
+
+/* Media Queries */
+/* Tablets */
+/* Cambia las propociones de la grafica segun el tamaño del depsositivo */
+@media (min-width: 768px) and (max-width: 959px) {
+    .grafica {
+        width: 90%;  
+    }
+    .grafica canvas {
+        height: 300px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 767px) {
+    .grafica {
+        width: 100%;  
+    }
+    .grafica canvas {
+        height: 200px;
+    }
+    /* Cuando el dispositivo sea un movil, se cambia el comportamiento del grid y los datos interesantes adquieren una forma de columna */
+    body{
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "section section"
+        "aside aside"
+        "footer footer";
+    }
+    .dato-interesante{
+        flex-direction: row;
+    }
+}

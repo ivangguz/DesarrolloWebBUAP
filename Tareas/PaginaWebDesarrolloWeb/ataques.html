@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataques</title>
+    <!-- Links de CSS que se ocupan en el documento -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/ataques.css">
+    <!--Chart.js Libreria-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header de la pagina, es el mismo en todas las paginas -->
+    <header>
+            <h1><span style="color: #821131">PIE GRANDE</span> MITO O REALIDAD?</h1>
+    </header>
+
+    <!-- Barra de navegacion que contiene las 5 paginas -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./testimonios.html">Testimonios</a>
+        <a href="./comunidad.html">Comunidad</a>
+        <a href="./contacto.html">Contacto</a>
+        <a class="active" href="#">Ataques</a>
+    </nav>
+
+    <!-- Seccion de la pagina web donde se muestra la grafica -->
+    <section style="background-image: url('/fotos/bosque.jpg')">
+        <!-- Contenedor principal -->
+        <div class="container">
+                <h1 class="red-text">Datos estadisticos sobre los ataques de Pie Grande en USA en los ultimos años</h1>
+                <!-- Contenedor secunadrio donde se encuentra la primer grafica -->
+                <div class="container">
+                    <h2>Ataques por año a personas</h2>
+                    <div class="grafica"><canvas id="ataquesYear"></canvas></div>
+                    <p class="grafica-desc">
+                        Como se puede ver en la grafica, los ataques han disminuid año con año, esto no quiere decir que han dejado de ocurrir, es por ello
+                        que las autoridades de USA recomiendan siempre tener un repelente contra Pies Grandes en la mochila, nunca salir a acampar a montañas o boques
+                        sin uno de ellos, es de extrema importancia
+                    </p>
+                </div>
+                <!-- Contenedor secunadrio donde se encuentra la segunda grafica -->
+                <div class="container">
+                    <h2>Ataques por Estado en USA</h2>
+                    <div class="grafica"><canvas id="ataquesLugar"></canvas></div>
+                    <p class="grafica-desc">
+                        Podemos observar en la grafica, que los estados con mas ataques de pie grande registrados son South Carolina y Missouri, esto es debido a
+                        la fauna que se encuentra en esos estados, ya que por la informacion que se tiene recabada, pie grande le gustan este tipo de zonas, un poco boscosas
+                        y algunas zonas aridas tales como South Carolina, en cambio lugares como Maine, Iowa y Wisconsin, son los que menos ataques registra
+                    </p>
+                </div>
+                <div>
+
+                </div>
+
+        </div>        
+    </section>
+
+    <!-- Seccion aside de la pagina web -->
+    <aside style="background-image: url('./fotos/bosque-nieve.jpg.avif');">
+        <h2 class="blue-text">DATOS INTERESANTES SOBRE PIE GRANDE</h2>
+        <!-- Primer dato interesante -->
+        <div class="container dato-interesante">
+            <img src="./fotos/pie-grande-1.jpg" alt="pie-grande" width="250px" height="auto">
+            <div>
+                <h3>Orígenes en la Cultura <span style="color: #821131;">Nativa Americana</span></h3>
+                <p class="blue-text">
+                    Pie Grande tiene raíces en las leyendas de diversas tribus nativas americanas, 
+                    donde es conocido como un ser mítico de gran tamaño que habita en los bosques profundos.
+                </p>
+            </div>
+        </div>
+        <!-- Segundo dato interesante -->
+        <div class="container dato-interesante">
+            <img src="./fotos/pie-grande-3.webp" alt="pie-grande" width="250px" height="auto">
+            <div>
+                <h3>Famoso Video de <span style="color: #821131;">Patterson-Gimlin</span></h3>
+                <p class="blue-text">
+                    En 1967, Roger Patterson y Bob Gimlin filmaron un famoso video de Pie Grande en California, 
+                    que sigue siendo uno de los documentos más debatidos y analizados en la criptozoología.
+                </p>
+            </div>
+        </div>
+        <!-- Tercer dato interesante -->
+        <div class="container dato-interesante">
+            <img src="./fotos/pie-grande-4.avif" alt="pie-grande" width="250px" height="auto">
+            <div>
+                <h3>Tamaño <span style="color: #821131;">Imponente</span></h3>
+                <p class="blue-text">
+                    Se estima que Pie Grande mide entre 2.4 y 3 metros de altura, con huellas que pueden
+                     llegar a medir hasta 60 cm de largo, a menudo con una estructura robusta.
+                </p>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Ivan Gonzalez. Derechos Reservados</p>
+    </footer>
+
+    <!-- Link al archivo JS que se utilizo para la grafica -->
+    <script type="module" src="./scripts/acquisitions.js"></script>
+</body>
+</html>

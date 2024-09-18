@@ -1,0 +1,70 @@
+/* Utilizando grid, se dividio la parte de en medio en section y aside
+y utilizando el grid-template-columns: 3fr 1fr; se dividio la pantalla
+esto quiere decir que la primer parte va a ser 3 veces el tamaño de la
+segunda parte */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+}
+/* Se da un color negro al texto dentro de aside */
+aside {
+    color: black;
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+section {
+    grid-area: section;
+}
+article {
+    margin-bottom: 20px;
+}
+.margen-aside{
+    margin-bottom: 10px;
+}
+/* a los enlaces dentro de li se les aplican las siguientes propiedades */
+li a{
+    background: #FF6600;
+    padding: 5px;
+    border: 2px solid #FF6600;
+    border-radius: 20px; 
+
+}
+li a:hover{
+    color: black;    
+}
+/* Clases y Media Querys */
+.video-container {
+    position: relative;
+    width: 100%; /* El contenedor ocupará el 100% del ancho disponible */
+    max-width: 800px; /* El ancho maxmimo sera de 800 pixeles */
+    height: auto;
+}
+
+.video-container video {
+    width: 100%; /* El video se ajustará al 100% del contenedor */
+    height: auto; /* se ajusta automatico */
+}
+
+/* A los enlaces que tengan targen blank se les aplicara un background de yellow */
+a[target=_blank] {
+    background-color: yellow;
+}
+
+/* Aqui se aplica la responsividad, cuando la pantalla sea menor a 767 pixeles, la seccion de aside se posicionara debajo de section */
+/* Móviles */
+@media (max-width: 767px) {
+    body{
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "section section"
+        "aside aside"
+        "footer footer";
+    }
+}

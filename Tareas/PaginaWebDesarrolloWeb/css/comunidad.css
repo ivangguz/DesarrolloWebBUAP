@@ -1,0 +1,122 @@
+/* Se aplica la misma logica que con index */
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+}
+aside {
+    color: black;
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+section{
+    grid-area: section;
+}
+
+/* Se crea un contenedor el cual va a incluir las siguientes caracteristicas
+para la tarjeta del perfil */
+.creador-perfil{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 10%; /* margen de 2% eje X y 10% eje Y */
+    justify-content: center;
+    align-items: center;
+    background-color: #86AB89;
+    padding: 2%;
+    border-radius: 15px; /*  Se crea un borde en las esquinas redondo para darle una mejor vista */
+    text-align: center;
+}
+
+/* Se crea un borde completamente redondo a la imagen con un ancho y largo del mismo tamañp 
+Asi mismo se le da un object-fit cover para que abarque todo su contenedor sin perder dimensiones*/
+.creador-perfil img {
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+/* Se le da un alto autoajustable y un ancho del 80% */
+.carrusel{
+    height: auto;
+    width: 80%;
+}
+
+.carrusel img{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* EL mismo contenedor de ataques */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* La diferencia es que este contenedor tiene row de flex-direction */
+.container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;   
+}
+
+.container2 img{
+    height: 70px;
+}
+
+
+/* Las media queris se utilizaron para redimencionar las imagenes */
+/* Ordenador */
+@media (min-width: 960px) {
+    img{
+        height: 200px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 959px) {
+    img{
+        height: 150px;
+    }
+    /* cambia el gap del contenedor */
+    .container2{
+        gap: 20%
+    }
+}
+
+/* Móviles */
+@media (max-width: 767px) {
+    img{
+        height: 150px;
+    }
+
+    body{
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "section section"
+        "aside aside"
+        "footer footer";
+    }
+
+    /* Se cambia la posicion para que se vea mejor en pantallas pequeñas */
+    .creador-perfil {
+        flex-direction: row;
+    }
+
+    .container2{
+        gap: 10%
+    }
+}
+

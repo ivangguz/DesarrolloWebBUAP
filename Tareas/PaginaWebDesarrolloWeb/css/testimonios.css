@@ -1,0 +1,70 @@
+/* Se usa la misma logica que en index.css */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "section section"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+}
+section {
+    grid-area: section;
+}
+/* Se crea un contenedor para darle formato a los testimonios, utilizando el display:flex principalmente */
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    text-align: center;
+}
+/* Aplica esto solo a los div que sean hijos directos de testimonio */
+/* Esto del hijo directo, ayudo bastante, para asi no tener que escribir una nueva clase en cada nuevo testimonio que
+quisieramos agregar */
+.testimonios > div {
+    display: flex;
+    flex-direction: row;
+    margin: 2% 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #86AB89;
+    padding: 2%;
+    border-radius: 15px;
+}
+/* Añadir margen entre la imagen y el texto */
+.testimonios > div img {
+    margin-right: 20px; 
+}
+
+/* A la primer linea del parrafo se le aplicara un color rojo y mayusculas que esten todas del mismo tamaño */
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+
+
+/* Los media queries se utilizaron para cambiar el tamaño de las imagenes */
+/* Ordenador */
+@media (min-width: 960px) {
+    img{
+        height: 200px;
+    }
+}
+/* Tablets */
+@media (min-width: 768px) and (max-width: 959px) {
+    img{
+        height: 150px;
+    }
+}
+/* Móviles */
+@media (max-width: 767px) {
+    img{
+        height: 150px;
+    }
+    /* Aqui se utilizo para cambiar el sentido del flex, de pasar de row a columna, para que se vea mejor en moviles */
+    .testimonios > div {
+        flex-direction: column;
+    }
+}

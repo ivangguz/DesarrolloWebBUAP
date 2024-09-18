@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Links de CSS que se ocupan en el documento -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/ataques.css">
+</head>
+<body>
+
+    <!-- Header de la pagina, es el mismo en todas las paginas -->
+    <header>
+        <h1><span style="color: #821131">PIE GRANDE</span> MITO O REALIDAD?</h1>
+    </header>
+
+    <!-- Barra de navegacion que contiene las 5 paginas -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./testimonios.html">Testimonios</a>
+        <a href="./comunidad.html">Comunidad</a>
+        <a href="#">Contacto</a>
+        <a href="./ataques.html">Ataques</a>
+    </nav>
+
+    <!-- Seccion de la pagina web donde se muestra un form -->
+    <section style="background-image: url('/fotos/bosque.jpg')">
+        <!-- Contenedor Principal -->
+        <div class="container">
+                <h1 class="red-text">CONTACTANOS</h1>
+                <h2>Si tienes alguna informacion acercad de Pie grande, envianos un email</h2>
+                <div>
+                    <div style="background: #E8B86D; padding: 20px;">
+                        <form action="#">
+                            <!-- input con type text -->
+                            <p class="red-text">Nombre:</p>
+                            <input type="text" name="username" size="60"
+                            maxlength="100" />
+                            
+                            <p class="red-text">Apellido:</p>
+                                <input type="text" name="username" size="60"
+                                maxlength="30" />
+                            
+                            <!-- input con type email -->
+                            <p class="red-text">Correo electronico:</p>
+                                <input type="email" name="username" size="60"
+                                maxlength="30" />
+                            
+                            <p class="red-text">Descripcion:</p>
+                                <input type="text" name="username" size="60"
+                                maxlength="30" />
+                                <!-- input con type files -->
+                            <p class="red-text">Pruebas:</p>
+                                <input type="file" name="username" size="60"
+                                maxlength="30" />
+                                <button class="btn btn-warning">Enviat</button>
+                        </form>
+                    </div>
+                </div>
+        </div>        
+    </section>
+
+    <!-- Seccion aside de la pagina web -->
+    <aside style="background-image: url('./fotos/bosque-nieve.jpg.avif');">
+        <h2 class="blue-text">DATOS INTERESANTES SOBRE PIE GRANDE</h2>
+        <!-- Primer dato interesante -->
+        <div class="container dato-interesante">
+            <img src="./fotos/pie-grande-1.jpg" alt="pie-grande" width="250px" height="auto">
+            <div>
+                <h3>Orígenes en la Cultura <span style="color: #821131;">Nativa Americana</span></h3>
+                <p class="blue-text">
+                    Pie Grande tiene raíces en las leyendas de diversas tribus nativas americanas, 
+                    donde es conocido como un ser mítico de gran tamaño que habita en los bosques profundos.
+                </p>
+            </div>
+        </div>
+        <!-- Segundo dato interesante -->
+        <div class="container dato-interesante">
+            <img src="./fotos/pie-grande-4.avif" alt="pie-grande" width="250px" height="auto">
+            <div>
+                <h3>Tamaño <span style="color: #821131;">Imponente</span></h3>
+                <p class="blue-text">
+                    Se estima que Pie Grande mide entre 2.4 y 3 metros de altura, con huellas que pueden
+                     llegar a medir hasta 60 cm de largo, a menudo con una estructura robusta.
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Ivan Gonzalez. Derechos Reservados</p>
+    </footer>
+</body>
+</html>
