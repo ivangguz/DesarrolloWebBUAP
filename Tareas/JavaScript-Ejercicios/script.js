@@ -257,6 +257,9 @@ function crearNomina(){
 let almacen = [
     { codigo: 1, existencia: 10 },
     { codigo: 2, existencia: 20 },
+    { codigo: 3, existencia: 30 },
+    { codigo: 4, existencia: 40 },
+    { codigo: 5, existencia: 50 },
   ];
   
   function procesarTransaccion() {
