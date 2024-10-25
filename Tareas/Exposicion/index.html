@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Métodos Numéricos en Desarrollo Web</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Métodos Numéricos en Desarrollo Web</h1>
+        
+        <!-- Característica 1: Operadores Aritméticos -->
+        <div class="feature">
+            <h2>Operadores Aritméticos</h2>
+            <div class="input-container">
+                <input type="number" id="num1" placeholder="Número 1">
+                <input type="number" id="num2" placeholder="Número 2">
+                <select id="operator">
+                    <option value="">Seleccione una operación</option>
+                    <option value="add">Suma (+)</option>
+                    <option value="subtract">Resta (-)</option>
+                    <option value="multiply">Multiplicación (*)</option>
+                    <option value="divide">División (/)</option>
+                    <option value="modulus">Módulo (%)</option>
+                </select>
+                <button onclick="calculate()">Calcular</button>
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+
+        <!-- Característica 2: Funciones Matemáticas Básicas -->
+        <div class="feature">
+            <h2>Funciones Matemáticas Básicas</h2>
+            <div class="input-container">
+                <input type="number" id="basicNum" placeholder="Número">
+                <select id="basicFunction">
+                    <option value="">Seleccione una función</option>
+                    <option value="abs">Valor absoluto</option>
+                    <option value="floor">Redondear hacia abajo</option>
+                    <option value="ceil">Redondear hacia arriba</option>
+                    <option value="round">Redondear</option>
+                    <option value="sqrt">Raíz cuadrada</option>
+                    <option value="cbrt">Raíz cúbica</option>
+                </select>
+                <button onclick="calculateBasic()">Calcular</button>
+                <div class="result" id="basicResult"></div>
+            </div>
+        </div>
+
+        <!-- Característica 3: Funciones Trigonométricas -->
+        <div class="feature">
+            <h2>Funciones Trigonométricas</h2>
+            <div class="input-container">
+                <input type="number" id="trigNum" placeholder="Ángulo en radianes">
+                <select id="trigFunction">
+                    <option value="">Seleccione una función</option>
+                    <option value="sin">Seno</option>
+                    <option value="cos">Coseno</option>
+                    <option value="tan">Tangente</option>
+                    <option value="asin">Arco seno</option>
+                    <option value="acos">Arco coseno</option>
+                    <option value="atan">Arco tangente</option>
+                </select>
+                <button onclick="calculateTrig()">Calcular</button>
+                <div class="result" id="trigResult"></div>
+            </div>
+        </div>
+
+        <!-- Característica 4: Funciones Logarítmicas y Exponenciales -->
+        <div class="feature">
+            <h2>Funciones Logarítmicas y Exponenciales</h2>
+            <div class="input-container">
+                <input type="number" id="logNum" placeholder="Número">
+                <select id="logFunction">
+                    <option value="">Seleccione una función</option>
+                    <option value="exp">e^x</option>
+                    <option value="log">Logaritmo natural (base e)</option>
+                    <option value="log10">Logaritmo base 10</option>
+                    <option value="log2">Logaritmo base 2</option>
+                </select>
+                <button onclick="calculateLog()">Calcular</button>
+                <div class="result" id="logResult"></div>
+            </div>
+        </div>
+
+        <!-- Característica 5: Métodos de Instancia del Objeto Number -->
+        <div class="feature">
+            <h2>Métodos de Instancia del Objeto Number</h2>
+            <div class="input-container">
+                <input type="number" id="numberInstance" placeholder="Número">
+                <select id="instanceMethod">
+                    <option value="">Seleccione un método</option>
+                    <option value="toFixed">toFixed</option>
+                    <option value="toExponential">toExponential</option>
+                    <option value="toPrecision">toPrecision</option>
+                    <option value="toString">toString</option>
+                    <option value="valueOf">valueOf</option>
+                    <option value="toLocaleString">toLocaleString</option>
+                </select>
+                <button onclick="calculateNumberInstance()">Calcular</button>
+                <div class="result" id="instanceResult"></div>
+            </div>
+        </div>
+
+        <!-- Característica 6: Métodos Estáticos del Objeto Number -->
+        <div class="feature">
+            <h2>Métodos Estáticos del Objeto Number</h2>
+            <div class="input-container">
+                <input type="text" id="staticValue" placeholder="Valor o cadena">
+                <select id="staticMethod">
+                    <option value="">Seleccione un método estático</option>
+                    <option value="isFinite">isFinite</option>
+                    <option value="isInteger">isInteger</option>
+                    <option value="isNaN">isNaN</option>
+                    <option value="isSafeInteger">isSafeInteger</option>
+                    <option value="parseFloat">parseFloat</option>
+                    <option value="parseInt">parseInt</option>
+                </select>
+                <button onclick="calculateNumberStatic()">Calcular</button>
+                <div class="result" id="staticResult"></div>
+            </div>
+        </div>
+
+        <!-- Característica 7: Otros Métodos -->
+        <div class="feature">
+            <h2>Otros</h2>
+            <p><strong>Math.random():</strong> Genera un número aleatorio entre 0 (incluido) y 1 (excluido).</p>
+            <p><strong>Math.sign(x):</strong> Devuelve el signo de un número (-1, 0, o 1).</p>
+            <p><strong>Math.trunc(x):</strong> Devuelve la parte entera de un número, eliminando cualquier parte decimal.</p>
+            <p>Existen librerías como Math.js o Numeric.js para trabajar con métodos numéricos en aplicaciones web. Estas herramientas facilitan la integración de cálculos avanzados directamente en el navegador.</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
