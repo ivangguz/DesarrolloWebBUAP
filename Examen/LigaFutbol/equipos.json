@@ -1,0 +1,102 @@
+[
+    {
+        "equipo": "Barcelona",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Real Madrid",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Bayern Munich",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Manchester City",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Liverpool",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Paris Saint-Germain",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Juventus",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Chelsea",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Atletico Madrid",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    },
+    {
+        "equipo": "Inter Milan",
+        "puntos": 0,
+        "partidos_jugados": 0,
+        "partidos_ganados": 0,
+        "partidos_empatados": 0,
+        "partidos_perdidos": 0,
+        "goles_a_favor": 0,
+        "goles_en_contra": 0
+    }
+]
