@@ -5,6 +5,18 @@ class Partido {
     }
 }
 
+function mostrarJornadas() {
+    fetch('./equipos.json')
+        .then((response) => response.json())
+        .then(data => {
+            const jornadas = document.getElementById('jornadas');
+            jornadas.innerHTML = '';
+
+
+
+        })
+}
+
 function mostrarEquipos() {
     fetch('./equipos.json')
         .then((response) => response.json())
@@ -76,6 +88,7 @@ function generarCalendario(equipos) {
         for (let j = 0; j < equipos.length; j++) {
             if (i !== j) {
                 calendario.push(new Partido(equipos[i].nombre, equipos[j].nombre));
+
             }
         }
     }
