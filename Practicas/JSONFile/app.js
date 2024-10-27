@@ -8,10 +8,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static(__dirname)); // Serve static files
 
-// Servidor a la pagina principal
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+s
 
 // Ruta para obtener los usuarios
 app.get('/usuarios', (req, res) => {

@@ -1,3 +1,41 @@
+// Inicio codigo de la profa
+// Función para cargar datos desde el archivo JSON y mostrarlos en la tabla
+function cargarUsuariosOriginal() {
+    fetch('usuarios.json')  // Aquí se carga el archivo JSON
+      .then(response => response.json())  // Convierte la respuesta en formato JSON
+      .then(usuarios => {
+        const tabla = document.getElementById('tabla-usuarios');
+        tabla.innerHTML = '';  // Limpiar la tabla antes de agregar nuevos datos
+  
+        // Recorrer el array de usuarios y agregar filas a la tabla
+        usuarios.forEach(usuario => {
+          const fila = document.createElement('tr');
+  
+          // Crear celdas y asignar valores desde el JSON
+          const celdaNombre = document.createElement('td');
+          celdaNombre.textContent = usuario.nombre;
+          fila.appendChild(celdaNombre);
+  
+          const celdaEdad = document.createElement('td');
+          celdaEdad.textContent = usuario.edad;
+          fila.appendChild(celdaEdad);
+  
+          const celdaCiudad = document.createElement('td');
+          celdaCiudad.textContent = usuario.ciudad;
+          fila.appendChild(celdaCiudad);
+  
+          // Agregar la fila completa a la tabla
+          tabla.appendChild(fila);
+        });
+      })
+      .catch(error => console.error('Error al cargar usuarios:', error));
+  }
+  // Cargar los usuarios al iniciar la página
+  window.onload = cargarUsuarios;
+  
+// Fin codigo de la profa
+
+
 let usuarios = [];
 let currentIndex = 0;
 
