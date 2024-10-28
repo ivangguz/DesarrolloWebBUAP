@@ -79,7 +79,12 @@ function mostrarEquipos() {
 }
 
 function ordenarTabla(equipos) {
-    return equipos.sort((a, b) => b.puntos - a.puntos);
+    return equipos.sort((a, b) => {
+        if (b.puntos === a.puntos) {
+            return b.diferenciaGoles - a.diferenciaGoles;
+        }
+        return b.puntos - a.puntos;
+    });
 }
 
 function generarCalendario(equipos) {
