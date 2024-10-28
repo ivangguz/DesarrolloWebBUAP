@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.round {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.round h2 {
+    color: #444;
+}
+
+.match {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.match p {
+    margin: 0;
+}
+
+.vs-column {
+    background-color: #FF4B44 !important; /* Dark background */
+    color: white !important; /* White text */
+    text-align: center; /* Center text */
+}
+
+.table-header {
+    background-color: #FF4B44; /* Dark background */
+    color: white; /* White text */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    text-align: center; /* Center text */
+}
+
+.contenedor-jornada{
+    max-width: 50%; 
+    margin: auto;
+}

@@ -1,30 +1,23 @@
 class Partido {
-    constructor(equipoLocal, equipoVisitante) {
+    constructor(equipoLocal, equipoVisitante, escudoLocal, escudoVisitante) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
+        this.escudoLocal = escudoLocal;
+        this.escudoVisitante = escudoVisitante;
     }
 }
 
-function mostrarJornadas() {
-    fetch('./equipos.json')
-        .then((response) => response.json())
-        .then(data => {
-            const jornadas = document.getElementById('jornadas');
-            jornadas.innerHTML = '';
-
-
-
-        })
-}
 
 function mostrarEquipos() {
     fetch('./equipos.json')
         .then((response) => response.json())
         .then(data => {
+            const dataOrdenada = ordenarTabla(data);
+
             const tabla = document.getElementById('tabla-equipos');
             tabla.innerHTML = '';
 
-            data.forEach(equipo => {
+            dataOrdenada.forEach(equipo => {
                 const fila = document.createElement('tr');
 
                 const celdaEscudo = document.createElement('td');
@@ -75,11 +68,15 @@ function mostrarEquipos() {
                 tabla.appendChild(fila);
             });
 
-            generarCalendario(data);
+            generarCalendario(dataOrdenada);
         })
         .catch((error) => {
             console.log(error);
         });
+}
+
+function ordenarTabla(equipos) {
+    return equipos.sort((a, b) => b.puntos - a.puntos);
 }
 
 function generarCalendario(equipos) {
@@ -87,33 +84,57 @@ function generarCalendario(equipos) {
     for (let i = 0; i < equipos.length; i++) {
         for (let j = 0; j < equipos.length; j++) {
             if (i !== j) {
-                calendario.push(new Partido(equipos[i].nombre, equipos[j].nombre));
-
+                calendario.push(new Partido(equipos[i].nombre, equipos[j].nombre, equipos[i].escudo, equipos[j].escudo));
             }
         }
     }
+    console.log(calendario);
     mostrarCalendario(calendario);
 }
 
-function mostrarCalendario(calendario) {
-    const tablaCalendario = document.getElementById('tabla-calendario');
-    tablaCalendario.innerHTML = '';
+function mostrarCalendario(partidos) {
+    const calendarioContainer = document.getElementById('calendario');
+    calendarioContainer.innerHTML = ''; // Clear any existing content
 
-    calendario.forEach(partido => {
-        const fila = document.createElement('tr');
+    partidos.forEach(partido => {
+        // Create the outer match div
+        const jornadaDiv = document.createElement('div');
+        jornadaDiv.classList.add('text-center', 'w-50', 'border', 'border-primary', 'mt-3');
+        
+        // Set up match header
+        jornadaDiv.innerHTML = `
+            <h2>Jornada 1</h2>
+            <div class="d-flex flex-column mx-auto p-3">
+              <div class="d-flex justify-content-between">
+                <p>Super Liga</p>
+                <p>Finalizado</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="text-center">
+                  <img src="${partido.escudoLocal}" class="escudo-img" />
+                  <div><p>${partido.equipoLocal}</p></div>
+                </div>
+                <div class="text-center">
+                  <h3>Resultado</h3>
+                  <h2>4 - 1</h2>
+                </div>
+                <div class="text-center">
+                  <img src="${partido.escudoVisitante}" class="escudo-img" />
+                  <div><p>${partido.equipoVisitante}</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="pb-3">
+                <button class="btn btn-warning me-2">Editar</button>
+                <button class="btn btn-warning me-2">Guardar</button>
+                <button class="btn btn-warning">Generar Resultado</button>
+            </div>
+        `;
 
-        const celdaLocal = document.createElement('td');
-        celdaLocal.textContent = `Local: ${partido.equipoLocal}`;
-        fila.appendChild(celdaLocal);
-
-        const celdaVisitante = document.createElement('td');
-        celdaVisitante.textContent = `Visitante: ${partido.equipoVisitante}`;
-        fila.appendChild(celdaVisitante);
-
-        tablaCalendario.appendChild(fila);
+        // Append the match div to the main container
+        calendarioContainer.appendChild(jornadaDiv);
     });
 }
-
 window.onload = mostrarEquipos;
 
 

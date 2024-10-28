@@ -12,19 +12,22 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- Link del Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 </head>
-<header class="d-flex justify-content-center py-3 bg-warning">
+<header class="d-flex justify-content-center py-3 fondo-rojo">
   <ul class="nav nav-pills">
-    <li class="nav-item"><a href="/index.html" class="nav-link active" aria-current="page">Inicio</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Tabla de Posiciones</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Jornadas</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Registrar Resultados</a></li>
+    <li class="nav-item bebas-neue-regular"><a href="/tabla.html" class="letras-amarillas nav-link">Tabla</a></li>
+    <li class="nav-item bebas-neue-regular"><a href="/calendario.html" class="nav-link letras-amarillas">Jornadas</a></li>
+    <li class="nav-item bebas-neue-regular"><a href="/modifResultados.html" class="nav-link letras-amarillas">Registrar Resultados</a></li>
   </ul>
 </header>
-  <body>
-    <div class="container">
-      <h1>Tabla de Equipos</h1>
+  <body class="camp-fondo">
+    <div class="container py-5">
+      <h1 class="fondo-azul letras-amarillas text-center p-3 bebas-neue-regular" style="font-size: 80px;">Tabla de Equipos</h1>
       <table class="table">
         <thead>
           <tr>
@@ -40,7 +43,7 @@
             <th scope="col">Pts</th>
           </tr>
         </thead>
-        <tbody id="tabla-equipos">
+        <tbody id="tabla-equipos" class="table-group-divider">
           <!-- Aqui se va a agregar dinamicamente los equipos -->
         </tbody>
       </table>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Liga de Fútbol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calendario de Liga de Fútbol</h1>
+    <div id="schedule"></div>
+
+    <script>
+        function generateRoundRobinSchedule(teams) {
+            const numTeams = teams.length;
+            const rounds = (numTeams - 1) * 2;
+            const halfSize = numTeams / 2;
+
+            let schedule = [];
+
+            let teamIndexes = [...Array(numTeams).keys()];
+
+            for (let round = 0; round < rounds; round++) {
+                let roundMatches = [];
+
+                for (let i = 0; i < halfSize; i++) {
+                    let home = teamIndexes[i];
+                    let away = teamIndexes[numTeams - 1 - i];
+
+                    if (round % 2 === 0) {
+                        roundMatches.push({ home: teams[home], away: teams[away] });
+                    } else {
+                        roundMatches.push({ home: teams[away], away: teams[home] });
+                    }
+                }
+
+                schedule.push(roundMatches);
+
+                teamIndexes.splice(1, 0, teamIndexes.pop());
+            }
+
+            return schedule;
+        }
+
+        const teams = ["Equipo 1", "Equipo 2", "Equipo 3", "Equipo 4", "Equipo 5", "Equipo 6", "Equipo 7", "Equipo 8", "Equipo 9", "Equipo 10"];
+        const schedule = generateRoundRobinSchedule(teams);
+
+        const scheduleContainer = document.getElementById('schedule');
+        schedule.forEach((round, index) => {
+            const roundDiv = document.createElement('div');
+            roundDiv.className = 'round';
+            roundDiv.innerHTML = `<h2>Jornada ${index + 1}</h2>`;
+            round.forEach(match => {
+                const matchDiv = document.createElement('div');
+                matchDiv.className = 'match';
+                matchDiv.innerHTML = `<p>${match.home} vs ${match.away}</p>`;
+                roundDiv.appendChild(matchDiv);
+            });
+            scheduleContainer.appendChild(roundDiv);
+        });
+    </script>
+</body>
+</html>

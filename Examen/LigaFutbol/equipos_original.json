@@ -2,7 +2,7 @@
     {
         "escudo": "public/escudos/Barcelona.webp",
         "nombre": "Barcelona",
-        "puntos": 10,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -14,7 +14,7 @@
     {
         "escudo": "public/escudos/Real-Madrid.webp",
         "nombre": "Real Madrid",
-        "puntos": 9,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -26,7 +26,7 @@
     {
         "escudo": "public/escudos/Bayern.png",
         "nombre": "Bayern Munich",
-        "puntos": 2,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -38,7 +38,7 @@
     {
         "escudo": "public/escudos/man-city.png",
         "nombre": "Manchester City",
-        "puntos": 5,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -50,7 +50,7 @@
     {
         "escudo": "public/escudos/liverpool.png",
         "nombre": "Liverpool",
-        "puntos": 14,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -62,7 +62,7 @@
     {
         "escudo": "public/escudos/paris.png",
         "nombre": "Paris Saint-Germain",
-        "puntos": 6,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -74,7 +74,7 @@
     {
         "escudo": "public/escudos/Juventus.png",
         "nombre": "Juventus",
-        "puntos": 7,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -98,7 +98,7 @@
     {
         "escudo": "public/escudos/chivas.png",
         "nombre": "Chivas",
-        "puntos": 4,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
@@ -110,7 +110,7 @@
     {
         "escudo": "public/escudos/Inter-Milan.png",
         "nombre": "Inter Milan",
-        "puntos": 7,
+        "puntos": 0,
         "partidos_jugados": 0,
         "partidos_ganados": 0,
         "partidos_empatados": 0,
