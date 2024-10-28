@@ -24,6 +24,10 @@ fetch('./equipos.json')
       const jornadaDiv = document.createElement('div');
       jornadaDiv.classList.add('jornada'); // Agregamos una clase para el estilo, si lo deseas
       jornadaDiv.innerHTML = `<h1 class="fondo-azul letras-amarillas text-center p-3 bebas-neue-regular mb-0 mt-5" style="font-size: 50px;">Jornada ${index + 1}</h1>`;
+      const divRow = document.createElement('div');
+      divRow.classList.add('d-flex', 'flex-wrap', 'g-5');
+      jornadaDiv.appendChild(divRow);    
+
 
       jornada.forEach(partido => {
         const partidoDiv = `
@@ -68,7 +72,7 @@ fetch('./equipos.json')
             </div>
           </div>
         `;
-        jornadaDiv.innerHTML += partidoDiv; // Añadir el partido al HTML de la jornada
+        divRow.innerHTML += partidoDiv; // Añadir el partido al HTML de la jornada
       });
 
       scheduleContainer.appendChild(jornadaDiv); // Añadir la jornada al contenedor principal
