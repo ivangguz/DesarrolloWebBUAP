@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Resultados de Partidos</title>
+</head>
+<body>
+    <div id="partidos" class="container">
+        <div id="jornada">
+            <h1 class="fondo-azul letras-amarillas text-center p-3 bebas-neue-regular mb-0 mt-5" style="font-size: 50px;">Jornada 1</h1>
+            <div id="divRow" class="d-flex flex-wrap g-5">
+                <div class="col-md-6">
+                    <div class="text-center border border-primary mt-3 fondo-blanco mx-auto">
+                        <h2 class="table-light">Jornada 1</h2>
+                        <div class="d-flex flex-column mx-auto p-3">
+                            <div class="d-flex justify-content-between">
+                                <p>Super Liga</p>
+                                <p>Finalizado</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="text-center">
+                                    <img src="./public/escudos/Barcelona.webp" class="escudo-img" alt="Barcelona Escudo" />
+                                    <div>
+                                        <p>Barcelona</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <form class="d-flex align-items-center flex-column" id="resultadoForm">
+                                        <h3>Resultado</h3>
+                                        <div class="d-flex flex-row">
+                                            <input type="number" name="score1" class="form-control mx-2" style="width: 50px;" value="4" />
+                                            <h2>-</h2>
+                                            <input type="number" name="score2" class="form-control mx-2" style="width: 50px;" value="1" />
+                                        </div>
+                                        <input type="text" name="nombre" placeholder="Nombre del equipo" class="form-control my-2" />
+                                        <input type="number" name="puntos" placeholder="Puntos" class="form-control my-2" />
+                                        <button type="button" class="btn btn-warning" id="guardarBtn">Guardar</button>
+                                    </form>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./public/escudos/Bayern.png" class="escudo-img" alt="Bayern Munich Escudo" />
+                                    <div>
+                                        <p>Bayern Munich</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./PRUEBAUNARCHIVO.js"></script>
+</body>
+</html>

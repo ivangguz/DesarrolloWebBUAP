@@ -7,7 +7,6 @@ class Partido {
     }
 }
 
-
 function mostrarEquipos() {
     fetch('./equipos.json')
         .then((response) => response.json())
@@ -17,8 +16,12 @@ function mostrarEquipos() {
             const tabla = document.getElementById('tabla-equipos');
             tabla.innerHTML = '';
 
-            dataOrdenada.forEach(equipo => {
+            dataOrdenada.forEach((equipo, index) => {
                 const fila = document.createElement('tr');
+
+                const celdaPosicion = document.createElement('td');
+                celdaPosicion.textContent = index + 1;
+                fila.appendChild(celdaPosicion);
 
                 const celdaEscudo = document.createElement('td');
                 const imagenEscudo = document.createElement('img');
@@ -135,6 +138,7 @@ function mostrarCalendario(partidos) {
         calendarioContainer.appendChild(jornadaDiv);
     });
 }
+
 window.onload = mostrarEquipos;
 
 
