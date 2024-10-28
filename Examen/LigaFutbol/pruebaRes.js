@@ -29,8 +29,9 @@ class Partido {
     return this.golesLocal > this.golesVisitante ? 'Victoria' : this.golesLocal < this.golesVisitante ? 'Derrota' : 'Empate'; 
   }
 
-  getResultadoVisitante() {
-     return this.golesVisitante > this.golesLocal ? 'Victoria' : this.golesVisitante < this.golesLocal ? 'Derrota' : 'Empate'; 
+  //Metodo para obtener el resultado del equipo visitante
+  getResultadoVisitante() { 
+    return this.golesVisitante > this.golesLocal ? 'Victoria' : this.golesVisitante < this.golesLocal ? 'Derrota' : 'Empate'; 
   }
 
   // Métodos para obtener diferencia de goles

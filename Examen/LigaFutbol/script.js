@@ -1,28 +1,23 @@
-class Partido {
-    constructor(equipoLocal, equipoVisitante, escudoLocal, escudoVisitante) {
-        this.equipoLocal = equipoLocal;
-        this.equipoVisitante = equipoVisitante;
-        this.escudoLocal = escudoLocal;
-        this.escudoVisitante = escudoVisitante;
-    }
-}
-
+// Función para mostrar los equipos en una tabla
 function mostrarEquipos() {
-    fetch('./equipos.json')
+    fetch('./equipos.json') // Obtener los datos de equipos desde el archivo equipos.json
         .then((response) => response.json())
         .then(data => {
-            const dataOrdenada = ordenarTabla(data);
+            const dataOrdenada = ordenarTabla(data); // Ordenar los equipos
 
             const tabla = document.getElementById('tabla-equipos');
-            tabla.innerHTML = '';
+            tabla.innerHTML = ''; // Limpiar la tabla existente
 
+            // Iterar sobre cada equipo y crear las filas correspondientes
             dataOrdenada.forEach((equipo, index) => {
                 const fila = document.createElement('tr');
 
+                // Celda para la posición del equipo
                 const celdaPosicion = document.createElement('td');
                 celdaPosicion.textContent = index + 1;
                 fila.appendChild(celdaPosicion);
 
+                // Celda para el escudo del equipo
                 const celdaEscudo = document.createElement('td');
                 const imagenEscudo = document.createElement('img');
                 imagenEscudo.src = equipo.escudo;
@@ -32,52 +27,62 @@ function mostrarEquipos() {
                 celdaEscudo.appendChild(imagenEscudo);
                 fila.appendChild(celdaEscudo);
 
+                // Celda para el nombre del equipo
                 const celdaNombre = document.createElement('td');
                 celdaNombre.textContent = equipo.nombre;
                 fila.appendChild(celdaNombre);
 
+                // Celda para los partidos jugados
                 const celdaPartidosJugados = document.createElement('td');
                 celdaPartidosJugados.textContent = equipo.partidos_jugados;
                 fila.appendChild(celdaPartidosJugados);
 
+                // Celda para los partidos ganados
                 const celdaPartidosGanados = document.createElement('td');
                 celdaPartidosGanados.textContent = equipo.partidos_ganados;
                 fila.appendChild(celdaPartidosGanados);
 
+                // Celda para los partidos empatados
                 const celdaPartidosEmpatados = document.createElement('td');
                 celdaPartidosEmpatados.textContent = equipo.partidos_empatados;
                 fila.appendChild(celdaPartidosEmpatados);
 
+                // Celda para los partidos perdidos
                 const celdaPartidosPerdidos = document.createElement('td');
                 celdaPartidosPerdidos.textContent = equipo.partidos_perdidos;
                 fila.appendChild(celdaPartidosPerdidos);
 
+                // Celda para los goles a favor
                 const celdaGolesFavor = document.createElement('td');
                 celdaGolesFavor.textContent = equipo.goles_favor;
                 fila.appendChild(celdaGolesFavor);
 
+                // Celda para los goles en contra
                 const celdaGolesContra = document.createElement('td');
                 celdaGolesContra.textContent = equipo.goles_contra;
                 fila.appendChild(celdaGolesContra);
 
+                // Celda para la diferencia de goles
                 const celdaDiferenciaGoles = document.createElement('td');
                 celdaDiferenciaGoles.textContent = equipo.diferenciaGoles;
                 fila.appendChild(celdaDiferenciaGoles);
 
+                // Celda para los puntos del equipo
                 const celdaPuntos = document.createElement('td');
                 celdaPuntos.textContent = equipo.puntos;
                 fila.appendChild(celdaPuntos);
 
-                tabla.appendChild(fila);
+                tabla.appendChild(fila); // Agregar la fila a la tabla
             });
 
-            generarCalendario(dataOrdenada);
+            generarCalendario(dataOrdenada); // Generar el calendario de partidos
         })
         .catch((error) => {
-            console.log(error);
+            console.log(error); // Manejar errores
         });
 }
 
+// Función para ordenar la tabla de equipos
 function ordenarTabla(equipos) {
     return equipos.sort((a, b) => {
         if (b.puntos === a.puntos) {
@@ -87,63 +92,7 @@ function ordenarTabla(equipos) {
     });
 }
 
-function generarCalendario(equipos) {
-    const calendario = [];
-    for (let i = 0; i < equipos.length; i++) {
-        for (let j = 0; j < equipos.length; j++) {
-            if (i !== j) {
-                calendario.push(new Partido(equipos[i].nombre, equipos[j].nombre, equipos[i].escudo, equipos[j].escudo));
-            }
-        }
-    }
-    console.log(calendario);
-    mostrarCalendario(calendario);
-}
-
-function mostrarCalendario(partidos) {
-    const calendarioContainer = document.getElementById('calendario');
-    calendarioContainer.innerHTML = ''; // Clear any existing content
-
-    partidos.forEach(partido => {
-        // Create the outer match div
-        const jornadaDiv = document.createElement('div');
-        jornadaDiv.classList.add('text-center', 'w-50', 'border', 'border-primary', 'mt-3');
-        
-        // Set up match header
-        jornadaDiv.innerHTML = `
-            <h2>Jornada 1</h2>
-            <div class="d-flex flex-column mx-auto p-3">
-              <div class="d-flex justify-content-between">
-                <p>Super Liga</p>
-                <p>Finalizado</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <div class="text-center">
-                  <img src="${partido.escudoLocal}" class="escudo-img" />
-                  <div><p>${partido.equipoLocal}</p></div>
-                </div>
-                <div class="text-center">
-                  <h3>Resultado</h3>
-                  <h2>4 - 1</h2>
-                </div>
-                <div class="text-center">
-                  <img src="${partido.escudoVisitante}" class="escudo-img" />
-                  <div><p>${partido.equipoVisitante}</p></div>
-                </div>
-              </div>
-            </div>
-            <div class="pb-3">
-                <button class="btn btn-warning me-2">Editar</button>
-                <button class="btn btn-warning me-2">Guardar</button>
-                <button class="btn btn-warning">Generar Resultado</button>
-            </div>
-        `;
-
-        // Append the match div to the main container
-        calendarioContainer.appendChild(jornadaDiv);
-    });
-}
-
+// Llamar a la función mostrarEquipos cuando la página se cargue
 window.onload = mostrarEquipos;
 
 

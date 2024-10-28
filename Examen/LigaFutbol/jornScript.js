@@ -5,20 +5,21 @@ class Partido {
         this.escudoLocal = escudoLocal;
         this.escudoVisitante = escudoVisitante;
     }
-
-
 }
 
 let equiposData = [];
 
+// Fetch para obtener los datos de equipos desde el archivo equipos.json
 fetch('./equipos.json')
   .then((response) => response.json())
   .then((data) => {
     equiposData = data;
 
+    // Generar el calendario de partidos usando el algoritmo Round Robin
     const schedule = generarRoundRobinCalendario(equiposData);
     const scheduleContainer = document.getElementById('jornadas');
 
+    // Iterar sobre cada jornada y crear los elementos HTML correspondientes
     schedule.forEach((round, index) => {
         // Crear el div principal para cada jornada
         const primerDiv = document.createElement('div');
@@ -47,6 +48,7 @@ fetch('./equipos.json')
         
         const tbody = document.createElement('tbody');
 
+        // Iterar sobre cada partido de la jornada y crear las filas correspondientes
         round.forEach(match => {
             const row = document.createElement('tr');
 
@@ -81,7 +83,7 @@ fetch('./equipos.json')
   })
   .catch((error) => console.error('Error extrayendo datos:', error));
 
-
+// Función para generar el calendario de partidos usando el algoritmo Round Robin
 function generarRoundRobinCalendario(teams){
     const numEquipos = teams.length;
     const jornadas = (numEquipos - 1) * 2;
@@ -89,15 +91,19 @@ function generarRoundRobinCalendario(teams){
 
     let calendario = [];
 
+    // Crear un array de índices de equipos
     let equipoIndexes = [...Array(numEquipos).keys()];
 
+    // Iterar sobre cada jornada
     for (let jornada = 0; jornada < jornadas; jornada++){
         let partidos = [];
 
+        // Iterar sobre cada partido de la jornada
         for (let partido = 0; partido < partidosPorJornada; partido++){
             let home = equipoIndexes[partido];
             let away = equipoIndexes[numEquipos - 1 - partido];
 
+            // Alternar entre partidos de ida y vuelta
             if (jornada % 2 === 0){
                 partidos.push(new Partido(teams[home].nombre, teams[away].nombre, teams[home].escudo, teams[away].escudo));
             }
@@ -106,9 +112,10 @@ function generarRoundRobinCalendario(teams){
             }
         }
 
+        // Agregar los partidos de la jornada al calendario
         calendario.push(partidos);
         equipoIndexes.splice(1, 0, equipoIndexes.pop());
     }
 
     return calendario;
-  }
+}

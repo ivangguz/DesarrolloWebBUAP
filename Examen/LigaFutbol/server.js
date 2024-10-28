@@ -5,18 +5,19 @@ const port = 3000;
 const fs = require('fs');
 
 app.use(express.json());
-app.use(express.static(__dirname)); // Serve static files
+app.use(express.static(__dirname)); // Servir archivos estáticos
 
-// Set up the default route to tabla.html
+// Configurar la ruta predeterminada a index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-
+// Iniciar el servidor
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
 
+// Ruta para reiniciar la tabla de equipos
 app.get('/equipos_original.json', (req, res) => {
   fs.readFile('equipos_original.json', 'utf8', (err, data) => {
       if (err) {
@@ -27,6 +28,7 @@ app.get('/equipos_original.json', (req, res) => {
   });
 });
 
+// Ruta para actualizar el archivo equipos.json
 app.put('/equipos.json', (req, res) => {
   fs.writeFile('equipos.json', JSON.stringify(req.body, null, 2), 'utf8', (err) => {
       if (err) {
@@ -37,6 +39,7 @@ app.put('/equipos.json', (req, res) => {
   });
 });
 
+// Ruta para actualizar los equipos
 app.post('/updateEquipos', (req, res) => {
   const equiposActualizados = req.body;
 

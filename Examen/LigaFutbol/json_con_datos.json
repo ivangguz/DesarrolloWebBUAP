@@ -1,0 +1,122 @@
+[
+    {
+      "escudo": "public/escudos/Barcelona.webp",
+      "nombre": "Barcelona",
+      "puntos": 32,
+      "partidos_jugados": 18,
+      "partidos_ganados": 9,
+      "partidos_empatados": 5,
+      "partidos_perdidos": 4,
+      "goles_favor": 38,
+      "goles_contra": 33,
+      "diferenciaGoles": 5
+    },
+    {
+      "escudo": "public/escudos/Real-Madrid.webp",
+      "nombre": "Real Madrid",
+      "puntos": 23,
+      "partidos_jugados": 18,
+      "partidos_ganados": 6,
+      "partidos_empatados": 5,
+      "partidos_perdidos": 7,
+      "goles_favor": 26,
+      "goles_contra": 37,
+      "diferenciaGoles": -11
+    },
+    {
+      "escudo": "public/escudos/Bayern.png",
+      "nombre": "Bayern Munich",
+      "puntos": 27,
+      "partidos_jugados": 18,
+      "partidos_ganados": 7,
+      "partidos_empatados": 6,
+      "partidos_perdidos": 5,
+      "goles_favor": 34,
+      "goles_contra": 25,
+      "diferenciaGoles": 9
+    },
+    {
+      "escudo": "public/escudos/man-city.png",
+      "nombre": "Manchester City",
+      "puntos": 23,
+      "partidos_jugados": 18,
+      "partidos_ganados": 6,
+      "partidos_empatados": 5,
+      "partidos_perdidos": 7,
+      "goles_favor": 24,
+      "goles_contra": 28,
+      "diferenciaGoles": -4
+    },
+    {
+      "escudo": "public/escudos/liverpool.png",
+      "nombre": "Liverpool",
+      "puntos": 22,
+      "partidos_jugados": 18,
+      "partidos_ganados": 4,
+      "partidos_empatados": 10,
+      "partidos_perdidos": 4,
+      "goles_favor": 23,
+      "goles_contra": 25,
+      "diferenciaGoles": -2
+    },
+    {
+      "escudo": "public/escudos/paris.png",
+      "nombre": "Paris Saint-Germain",
+      "puntos": 25,
+      "partidos_jugados": 18,
+      "partidos_ganados": 6,
+      "partidos_empatados": 7,
+      "partidos_perdidos": 5,
+      "goles_favor": 30,
+      "goles_contra": 26,
+      "diferenciaGoles": 4
+    },
+    {
+      "escudo": "public/escudos/Juventus.png",
+      "nombre": "Juventus",
+      "puntos": 18,
+      "partidos_jugados": 18,
+      "partidos_ganados": 4,
+      "partidos_empatados": 6,
+      "partidos_perdidos": 8,
+      "goles_favor": 26,
+      "goles_contra": 32,
+      "diferenciaGoles": -6
+    },
+    {
+      "escudo": "public/escudos/Chelsea.png",
+      "nombre": "Chelsea",
+      "puntos": 20,
+      "partidos_jugados": 18,
+      "partidos_ganados": 5,
+      "partidos_empatados": 5,
+      "partidos_perdidos": 8,
+      "goles_favor": 24,
+      "goles_contra": 24,
+      "diferenciaGoles": 0
+    },
+    {
+      "escudo": "public/escudos/chivas.png",
+      "nombre": "Chivas",
+      "puntos": 27,
+      "partidos_jugados": 18,
+      "partidos_ganados": 6,
+      "partidos_empatados": 9,
+      "partidos_perdidos": 3,
+      "goles_favor": 35,
+      "goles_contra": 21,
+      "diferenciaGoles": 14
+    },
+    {
+      "escudo": "public/escudos/Inter-Milan.png",
+      "nombre": "Inter Milan",
+      "puntos": 19,
+      "partidos_jugados": 18,
+      "partidos_ganados": 3,
+      "partidos_empatados": 10,
+      "partidos_perdidos": 5,
+      "goles_favor": 20,
+      "goles_contra": 29,
+      "diferenciaGoles": -9
+    }
+  ]
