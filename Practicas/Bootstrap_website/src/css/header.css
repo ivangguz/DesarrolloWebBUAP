@@ -1,0 +1,124 @@
+.navbar{
+    background-color: #f70759;
+    height: 80px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.boton-llamada{
+    background-color: white;
+    color: #000;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.boton-llamada:hover {
+    background-color: #FFC107;
+}
+
+.navbar-toggle{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggle:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: white;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FFC107;
+        opacity: 0;
+        transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transition width and opacity */
+      }
+      
+      .nav-link:hover::before, .nav-link.active::before{
+        width: 100%; /* Change width on hover */
+        opacity: 1; /* Change opacity on hover */
+      }
+}
+
+@media (max-width: 991px) {
+    .boton-llamada {
+      margin-right: 10px;
+    }
+}
+  
+
+.hero-section {
+    background: url(/images/chica-dentista.avif) no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+/*Esto oscurece un poco la pantalla debajo del navbar*/
+
+.hero-section::before{
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 1.5rem;
+}
+
+.hero-section h2{
+    font-size: 1.2rem;
+}
+
+.margen-para-header{
+    margin-top: 80px;
+}
+
+.dropshadow {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+}
+
+.offcanvas {
+    background-color: #f70759;
+}
+
+.dropdown-menu{
+    --bs-dropdown-link-active-bg: #FFC107;
+}

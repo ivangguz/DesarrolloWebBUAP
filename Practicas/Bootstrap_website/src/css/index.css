@@ -1,0 +1,147 @@
+.fondo-body{
+    background: white;
+}
+
+.margen-carrusel {
+    margin-top: 80px;
+}
+
+
+.c-item{
+    height: 480px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.gap-cards{
+    gap: 3rem !important;
+}
+
+/* Media Queries */
+/*(phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .d-flex-card {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gap-cards{
+        gap: 0.5rem !important;
+    }
+    .d-flex {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your CSS rules for large devices */
+    .c-item{
+        height: 500px;
+    }
+}
+
+/* Overlay on the image */
+  /* Container for the image and text overlay */
+  .img-overlay-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Style for the full overlay */
+  .img-overlay-container .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background covering the entire image */
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    transition: background 0.3s ease; /* Transition for background color */
+  }
+
+  /* Large font size for "8" */
+  .overlay-text .big-number {
+    font-size: 5rem; /* Adjust this size as needed */
+    line-height: 1;
+    transition: font-size 0.3s ease; /* Transition for font size */
+    color: 
+  }
+
+  /* Smaller font size for "November" */
+  .overlay-text .small-text {
+    font-size: 1.5rem; /* Adjust this size as needed */
+    line-height: 1;
+  }
+
+  /* Hover effect */
+  .img-overlay-container:hover .overlay-text {
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay on hover */
+  }
+
+  /* Hover effect for the number */
+  .img-overlay-container:hover .big-number {
+    font-size: 7rem; /* Increase size on hover */
+  }
+
+  /* Optional: Add a shadow to the image */
+  .img-overlay-container img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .dropshadow {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dropshadow-sm {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.dropshadow-md {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.30);
+}
+
+.card-destinos {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+.card-destinos:hover {
+  transform: scale(1.035); /* Increase the scale value for a larger hover effect */
+}
+
+.text-justify {
+  text-align: justify; /* Justify the text */
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+}
+
+.color-rosa{
+  color: #f70759;
+}
+
+.color-amarillo{
+  color: #FFC107;
+}

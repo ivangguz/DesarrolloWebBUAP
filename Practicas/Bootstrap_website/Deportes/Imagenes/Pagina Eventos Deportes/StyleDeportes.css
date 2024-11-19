@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card-header{
+
+    background-color:#FFDADF; 
+}
+.containerPr {/*Contenedor Precio*/
+    background-color: #f22648; 
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 20px;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+.containerBG {/*Contenedor Boleto General*/
+    background-color: #dc576d; 
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 20px;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.containerIN {/*Contenedor Incluye*/
+    background-color:#FFDADF; 
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 20px;
+    text-align: justify; /* Centra el texto horizontalmente */
+}
+
+.containerNOIN {/*Contenedor NO Incluye*/
+    background-color: #FEACC4; 
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 20px;
+    text-align: justify; /* Centra el texto horizontalmente */
+}
+
+.containerDes{
+    color: rgb(17, 17, 17);
+}
+
+body {
+    background-color: rgb(238, 237, 237);
+    color: rgb(10, 10, 10);
+ }
+
+h1:hover{
+    text-shadow: #EF3167 -3px 0, cyan 3px 0;
+
+}
+h1{
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin: 10px 0px;
+font-size: xx-large;
+}
+h3{
+    text-align:justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 15px 0px;
+    font-size: x-large;
+    }
+img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba (15, 15, 15, .5);
+}
+
+ul {
+    list-style-type: none; /* Quita los puntos de las listas */
+    padding: 0;
+}
+
+
+.containerComents { /*Caja comentarios*/
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fdc6d6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f22648;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+#commentsSection {
+    margin-top: 40px;
+}
+
+#commentsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#commentsList li {
+    background: #e9e9e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#commentsList li .name {
+    font-weight: bold;
+}
+.map-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: transparent;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustes de CSS para hacer el texto y el slider responsivos */
+.containerDes h1, .containerDes h3 {
+    margin-bottom: 20px; /* Espacio entre el título y el texto */
+}
+
+/* Para asegurar que el contenedor del slider mantenga su tamaño */
+.carousel {
+    max-height: 100%; /* Asegúrate de que el slider no desborde su contenedor */
+}
+
+.carousel img {
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+    height: auto; /* Asegura que la altura sea automática */
+}

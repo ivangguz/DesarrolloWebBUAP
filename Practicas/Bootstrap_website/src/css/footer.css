@@ -1,0 +1,28 @@
+/* Footer */
+.b-example-divider {
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+  }
+  
+  .footer-image{
+    width:10rem; 
+    height:10rem;
+  }
+
+  .footer{
+    background-color: #f70759;
+    color: #FFC107;
+  }
+  
+  body{
+    padding-bottom: 0;
+  }
+  
+  /* .text-body-secondary{
+    --bs-secondary-color: #fff;
+  } */
+
+  .blanco{
+    color: #fff !important;
+  }
